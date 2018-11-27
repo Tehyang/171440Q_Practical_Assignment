@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">171440Q_Movie_Rater</string>
+    <string name="tv_name">Name</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="tv_description">Description</string>
+    <string name="tv_language">Language</string>
+    <string name="rbtn1_text">English</string>
+    <string name="rbtn2_text">Chinese</string>
+    <string name="rbtn3_text">Malay</string>
+    <string name="rbtn4_text">Tamil</string>
+    <string name="tv_release_date">Release date</string>
+    <string name="release_date_hint">Enter release date here</string>
+    <string name="checkbox1_text">Not suitable for all audience</string>
+    <string name="checkbox2_text">Violence</string>
+    <string name="checkbox3_text">Language used</string>
+    <string name="btn_text">ADD MOVIE</string>
+
+</resources>
