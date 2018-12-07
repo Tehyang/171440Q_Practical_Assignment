@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="65px"
-            android:id="@+id/miReview"
+            android:id="@+id/reviewMsg"
             android:text="No Reviews yet \nLong press to add review"/>
     <TextView
             android:layout_width="wrap_content"

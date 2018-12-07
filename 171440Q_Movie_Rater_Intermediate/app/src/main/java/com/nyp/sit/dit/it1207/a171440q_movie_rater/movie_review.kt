@@ -19,11 +19,13 @@ class movie_review : AppCompatActivity() {
         reviewLanguage.text = instanceMovie.reviewLang
         reviewRelDate.text = instanceMovie.reviewRelDate
         reviewSuitable.text = instanceMovie.reviewSuitAudience
+
+        registerForContextMenu(reviewMsg)
     }
 
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
         super.onCreateContextMenu(menu, v, menuInfo)
-        if (v?.id == R.id.miReview) {
+        if (v?.id == R.id.reviewMsg) {
             menu?.add(1, 1001, 1, "Add Review")
         }
     }
