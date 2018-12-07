@@ -63,10 +63,10 @@ class MainActivity : AppCompatActivity() {
 
             // Check suitability for audience
             if (checkbox1.isChecked){
-                inputSuitable = "False"
+                inputSuitable = "No"
             }
             else {
-                inputSuitable = "True"
+                inputSuitable = "Yes"
             }
 
             // Reasons for not being suitable for audience
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                 inputReason2 = "Language"
             }
             if (checkbox2.isChecked && checkbox3.isChecked) {
-                inputReason1 = "Violence"
+                inputReason1 = "Violence, "
                 inputReason2 = "Language"
             }
 
@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
             instanceMovie.reviewDesc = inputDespt
             instanceMovie.reviewRelDate = inputDate
             instanceMovie.reviewLang = inputLanguageRadio
-            instanceMovie.reviewSuitAudience = inputSuitable + "\n" + inputReason1 + "\n" + inputReason2
+            instanceMovie.reviewSuitAudience = "$inputSuitable($inputReason1$inputReason2)"
 
             if (isValid == true) {
                 var addedMovie = Intent(applicationContext, movie_review::class.java)
@@ -136,10 +136,6 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    fun btnReview(v:View){
-        var reviewBtn = Intent(applicationContext, movie_review::class.java)
-        startActivity(reviewBtn)
-    }
     fun btnRater(v:View){
         var raterBtn = Intent(applicationContext, movie_rater::class.java)
         startActivity(raterBtn)
