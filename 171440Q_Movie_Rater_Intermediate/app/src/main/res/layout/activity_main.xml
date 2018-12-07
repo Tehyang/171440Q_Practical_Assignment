@@ -101,11 +101,6 @@
     <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="btnValidate"
-            android:text="@string/btn_text"/>
-    <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:onClick="btnReview"
             android:text="Movie Review"/>
     <Button

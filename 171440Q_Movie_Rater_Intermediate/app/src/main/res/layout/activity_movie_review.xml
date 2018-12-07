@@ -29,6 +29,16 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Reviews"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="65px"
+            android:id="@+id/miReview"
+            android:text="No Reviews yet \nLong press to add review"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Language"/>
     <TextView
             android:id="@+id/reviewLanguage"
