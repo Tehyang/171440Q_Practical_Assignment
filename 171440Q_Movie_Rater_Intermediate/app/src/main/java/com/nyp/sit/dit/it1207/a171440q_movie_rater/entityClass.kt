@@ -6,6 +6,8 @@ class movieEntity {
     var reviewLang: String = ""
     var reviewRelDate: String = ""
     var reviewSuitAudience: String = ""
+    var ratingBarForMovie: Float = -1F
+    var ratingTextForMovie: String = ""
 }
 
 var instanceMovie = movieEntity()

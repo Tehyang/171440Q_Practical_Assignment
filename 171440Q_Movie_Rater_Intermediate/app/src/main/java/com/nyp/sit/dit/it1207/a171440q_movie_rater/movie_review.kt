@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
+import kotlinx.android.synthetic.main.activity_movie_rater.*
+import kotlinx.android.synthetic.main.activity_movie_rater.view.*
 import kotlinx.android.synthetic.main.activity_movie_review.*
 
 class movie_review : AppCompatActivity() {
@@ -21,6 +23,20 @@ class movie_review : AppCompatActivity() {
         reviewSuitable.text = instanceMovie.reviewSuitAudience
 
         registerForContextMenu(reviewMsg)
+
+        if (instanceMovie.ratingBarForMovie == -1F)
+        {
+            reviewMsg.visibility = View.VISIBLE
+            addedRating.visibility = View.INVISIBLE
+            reviewText.visibility = View.INVISIBLE
+        } else {
+            addedRating.rating = instanceMovie.ratingBarForMovie
+            reviewText.text = instanceMovie.ratingTextForMovie
+
+            reviewMsg.visibility = View.INVISIBLE
+            addedRating.visibility = View.VISIBLE
+            reviewText.visibility = View.VISIBLE
+        }
     }
 
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
