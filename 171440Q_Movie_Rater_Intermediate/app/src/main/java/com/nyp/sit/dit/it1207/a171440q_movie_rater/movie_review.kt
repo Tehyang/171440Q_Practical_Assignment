@@ -16,6 +16,8 @@ class movie_review : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_review)
 
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         reviewTitle.text = instanceMovie.reviewName
         reviewOverview.text = instanceMovie.reviewDesc
         reviewLanguage.text = instanceMovie.reviewLang

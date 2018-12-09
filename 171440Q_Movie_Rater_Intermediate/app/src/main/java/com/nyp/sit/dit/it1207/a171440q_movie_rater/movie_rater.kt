@@ -13,6 +13,8 @@ class movie_rater : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_rater)
+
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -3,16 +3,13 @@ package com.nyp.sit.dit.it1207.a171440q_movie_rater
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.RadioGroup
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import android.widget.Button
-import android.widget.RadioButton
 import com.nyp.sit.dit.it1207.a171440q_movie_rater.movieEntity
 import android.content.Intent
 import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +24,8 @@ class MainActivity : AppCompatActivity() {
                 radioGroup2.visibility = View.INVISIBLE
             }
         })
+
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -134,10 +133,5 @@ class MainActivity : AppCompatActivity() {
             checkbox3.isChecked = false
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    fun btnRater(v:View){
-        var raterBtn = Intent(applicationContext, movie_rater::class.java)
-        startActivity(raterBtn)
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/miAdd"
-        android:title="Add"
+        android:id="@+id/miSave"
+        android:title="Save"
         app:showAsAction="always"/>
     <item
-        android:id="@+id/miClear"
-        android:title="Clear Entries"
-        app:showAsAction="never"/>
+        android:id="@+id/miCancel"
+        android:title="Cancel"
+        app:showAsAction="always"/>
 </menu>
