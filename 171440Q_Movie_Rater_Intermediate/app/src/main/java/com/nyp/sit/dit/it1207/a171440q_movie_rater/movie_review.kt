@@ -29,13 +29,13 @@ class movie_review : AppCompatActivity() {
         if (instanceMovie.ratingBarForMovie == -1F)
         {
             reviewMsg.visibility = View.VISIBLE
-            addedRating.visibility = View.INVISIBLE
-            reviewText.visibility = View.INVISIBLE
+            addedRating.visibility = View.GONE
+            reviewText.visibility = View.GONE
         } else {
             addedRating.rating = instanceMovie.ratingBarForMovie
             reviewText.text = instanceMovie.ratingTextForMovie
 
-            reviewMsg.visibility = View.INVISIBLE
+            reviewMsg.visibility = View.GONE
             addedRating.visibility = View.VISIBLE
             reviewText.visibility = View.VISIBLE
         }

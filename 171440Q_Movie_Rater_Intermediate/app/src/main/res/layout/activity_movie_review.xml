@@ -41,14 +41,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/addedRating"
-            android:visibility="invisible"
-            android:rating="-1"/>
+            android:rating="-1"
+            android:isIndicator="true"/>
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="65px"
-            android:id="@+id/reviewText"
-            android:visibility="invisible"/>
+            android:id="@+id/reviewText"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
