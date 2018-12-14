@@ -7,14 +7,16 @@
         android:layout_height="match_parent"
         tools:context=".Landing_Activity">
 
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/landingList">
+    </ListView>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/landingMsg"
-            android:text="You have not added a movie \nLong Press me to add movie"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:id="@+id/testingText"
+            android:text=""
+    />
 
 </android.support.constraint.ConstraintLayout>

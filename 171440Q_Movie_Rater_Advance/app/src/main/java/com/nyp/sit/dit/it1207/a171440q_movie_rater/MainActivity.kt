@@ -11,7 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
 
-class MainActivity : AppCompatActivity() {
+class   MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,6 +81,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             var isValid: Boolean = true
+
+            var suitabilityChecked = checkbox1.isChecked
             var violenceChecked = checkbox2.isChecked
             var languageChecked = checkbox3.isChecked
 
@@ -104,20 +106,21 @@ class MainActivity : AppCompatActivity() {
             } else {
                 rbtnValidate.setError(null)
             }
-            if (violenceChecked == false && languageChecked == false) {
-                suitValidate.setError("Please choose reason")
-                isValid = false
-            } else {
-                suitValidate.setError(null)
+            if (suitabilityChecked == true)
+            {
+                if (violenceChecked == false && languageChecked == false) {
+                    suitValidate.setError("Please choose reason")
+                    isValid = false
+                } else {
+                    suitValidate.setError(null)
+                }
             }
 
-            instanceMovie.reviewName = inputName
-            instanceMovie.reviewDesc = inputDespt
-            instanceMovie.reviewRelDate = inputDate
-            instanceMovie.reviewLang = inputLanguageRadio
-            instanceMovie.reviewSuitAudience = "$inputSuitable($inputReason1$inputReason2)"
 
             if (isValid == true) {
+                instanceMovie = movieEntity(inputName, inputDespt, inputDate, inputLanguageRadio, "$inputSuitable($inputReason1$inputReason2)", -1F, "")
+                movieArray.add(instanceMovie)
+
                 var addedMovie = Intent(applicationContext, movie_review::class.java)
                 startActivity(addedMovie)
             }
