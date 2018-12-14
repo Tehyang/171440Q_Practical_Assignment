@@ -7,6 +7,7 @@ import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_landing_.*
 
@@ -15,6 +16,7 @@ class Landing_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing_)
+        movieTitleList.clear()
 
         for (movieItems in movieArray)
         {
@@ -23,6 +25,13 @@ class Landing_Activity : AppCompatActivity() {
         val movieAdapt = ArrayAdapter(this, android.R.layout.simple_list_item_1, movieTitleList)
         landingList.adapter = movieAdapt
         registerForContextMenu(landingList)
+
+        landingList.setOnItemClickListener{parent, view, position, id ->
+            val entityObject = movieArray.get(position)
+            instanceMovie = movieEntity(entityObject.reviewName, entityObject.reviewDesc, entityObject.reviewLang, entityObject.reviewRelDate, entityObject.reviewSuitAudience, entityObject.ratingBarForMovie, entityObject.ratingTextForMovie)
+            val viewReview = Intent(applicationContext, movie_review::class.java)
+            startActivity(viewReview)
+        }
     }
 
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {

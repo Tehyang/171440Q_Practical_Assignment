@@ -116,7 +116,6 @@ class   MainActivity : AppCompatActivity() {
                 }
             }
 
-
             if (isValid == true) {
                 instanceMovie = movieEntity(inputName, inputDespt, inputDate, inputLanguageRadio, "$inputSuitable($inputReason1$inputReason2)", -1F, "")
                 movieArray.add(instanceMovie)

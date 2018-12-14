@@ -44,12 +44,12 @@ class movie_review : AppCompatActivity() {
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
         super.onCreateContextMenu(menu, v, menuInfo)
         if (v?.id == R.id.reviewMsg) {
-            menu?.add(1, 1001, 1, "Add Review")
+            menu?.add(1, 2002, 1, "Add Review")
         }
     }
 
     override fun onContextItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == 1001) {
+        if (item?.itemId == 2002) {
             var addReview = Intent(applicationContext, movie_rater::class.java)
             startActivity(addReview)
         }
